@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Maddie Meyerle">
-<meta name="dcterms.date" content="2024-11-14">
+<meta name="dcterms.date" content="2024-12-05">
 
-<title>How the Denver Broncos Went From Super Bowl Champions to a Struggling Offense – Blog</title>
+<title>Christian McCaffrey – Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -125,9 +159,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How the Denver Broncos Went From Super Bowl Champions to a Struggling Offense</h1>
+      <h1 class="title">Christian McCaffrey</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">broncos</div>
+                <div class="quarto-category">mccaffrey</div>
                 <div class="quarto-category">analysis</div>
                 <div class="quarto-category">nfl</div>
               </div>
@@ -147,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 14, 2024</p>
+        <p class="date">December 5, 2024</p>
       </div>
     </div>
     
@@ -166,11 +200,78 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>The Denver Broncos have been a rollercoaster ride for the last decade. From the high of winning Super Bowl 50 with Peyton Manning in 2015 to the frustration of the ongoing eight-year playoff drought, it’s hard to ignore the apparent contrast. Manning’s final season was a fairytale ending for one of the greatest quarterbacks ever to play the game. But after he left, it feels like the magic disappeared.</p>
-<p>If you’re a Broncos fan, you know exactly what I’m talking about. Sure, they’ve had some moments, but overall? It’s been a long, tough stretch. Here’s the thing–when you really break down the numbers, it’s even worse than it seems. So, let’s dive into some stats and see how much the Broncos’ offense has struggled since Super Bowl 50.</p>
-<p>Let’s start with the offensive yards because, let’s face it, that’s the heart of the game. The data shows a vast difference between before and after the 2015 season. The bar chart below shows the total offensive yards for the Broncos from 2012 to 2023. Notice the massive spike in 2013? A whopping 8622 yards, and you know what? That was Peyton Manning in his prime with many of his offensive teammates producing big numbers. The offense was in sync, the weapons fired, and everything clicked.</p>
-<p>Then, it’s like someone flipped a switch. After Super Bowl 50, the Broncos’ offensive yards just plummeted. Even though the team was fresh off a Super Bowl win, without Manning, the offense started to struggle. And, the numbers haven’t really bounced back.</p>
+<p>text</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cran.rstudio.com/"</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflfastR)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pbp_data <span class="ot">&lt;-</span> <span class="fu">load_pbp</span>(<span class="at">season =</span> <span class="dv">2022</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mccaffrey_data <span class="ot">&lt;-</span> pbp_data <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(rusher <span class="sc">==</span> <span class="st">"C.McCaffrey"</span> <span class="sc">|</span> receiver <span class="sc">==</span> <span class="st">"C.McCaffrey"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(game_date) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">rushing_yards =</span> <span class="fu">sum</span>(rushing_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">receiving_yards =</span> <span class="fu">sum</span>(receiving_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(rushing_yards, receiving_yards),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"yard_type"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"yards"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(yards))</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>mccaffrey_data<span class="sc">$</span>game_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(mccaffrey_data<span class="sc">$</span>game_date)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>date_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fu">min</span>(mccaffrey_data<span class="sc">$</span>game_date),</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>                <span class="at">to =</span> <span class="fu">max</span>(mccaffrey_data<span class="sc">$</span>game_date),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">by =</span> <span class="st">"month"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mccaffrey_data, <span class="fu">aes</span>(<span class="at">x =</span> game_date, <span class="at">y =</span> yards, <span class="at">color =</span> yard_type)) <span class="sc">+</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Christian McCaffrey's Rushing and Receiving Yards (2022)"</span>,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"yard and stuff"</span>,</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"By: Maddie Meyerle | Source: nflverse"</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Game Date"</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Yards"</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Yard Type"</span>) <span class="sc">+</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"receiving_yards"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"rushing_yards"</span> <span class="ot">=</span> <span class="st">"orange"</span>),</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Receiving Yards"</span>, <span class="st">"Rushing Yards"</span>)) <span class="sc">+</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">breaks =</span> date_seq, <span class="at">date_labels =</span> <span class="st">"%b %Y"</span>, <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -179,550 +280,57 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The numbers don’t lie. Manning’s departure left a gaping hole in Denver’s offensive play. That 2013 peak was the high point; since then, it’s been all downhill. And we’re not just talking about a slight dip–this is a dramatic drop in offensive production.</p>
-<p>If the drop in total offensive yards wasn’t a big enough pill to swallow, the Broncos’ passing efficiency tells an even bigger story. Despite the Super Bowl win, Denver’s passing game sharply declined from 2014 to 2015, which became even more apparent after Manning’s retirement.</p>
+<p>text…</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(waffle)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>after_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2022-10-23"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>before_data <span class="ot">&lt;-</span> pbp_data <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(posteam <span class="sc">==</span> <span class="st">"SF"</span> <span class="sc">&amp;</span> game_date <span class="sc">&lt;</span> after_date) <span class="sc">|&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_rushing_yards =</span> <span class="fu">sum</span>(rushing_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_passing_yards =</span> <span class="fu">sum</span>(passing_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>after_data <span class="ot">&lt;-</span> pbp_data <span class="sc">|&gt;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(posteam <span class="sc">==</span> <span class="st">"SF"</span> <span class="sc">&amp;</span> game_date <span class="sc">&gt;=</span> after_date) <span class="sc">|&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_rushing_yards =</span> <span class="fu">sum</span>(rushing_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_passing_yards =</span> <span class="fu">sum</span>(passing_yards, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>before <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Rushing"</span> <span class="ot">=</span> <span class="dv">744</span>, <span class="st">"Passing"</span> <span class="ot">=</span> <span class="dv">1347</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Rushing"</span> <span class="ot">=</span> <span class="dv">1991</span>, <span class="st">"Passing"</span> <span class="ot">=</span> <span class="dv">3345</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">iron</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">waffle</span>(</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    before <span class="sc">/</span> <span class="dv">25</span>, </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> <span class="dv">5</span>, </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Nebraska vs Purdue: Offense comparison"</span>, </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab =</span> <span class="st">"1 square = 25 yards"</span>, </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"black"</span>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">waffle</span>(</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    after <span class="sc">/</span> <span class="dv">25</span>, </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">rows =</span> <span class="dv">12</span>, </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">""</span>, </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">xlab =</span> <span class="st">"1 square = 25 yards"</span>, </span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#CFB991"</span>, <span class="st">"#000000"</span>, <span class="st">"white"</span>)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Here’s the thing: Manning, nearing the end of his career, wasn’t the same quarterback as he was in his prime. Sure, the Broncos’ stellar defense stepped up in a big way that season, playing a massive role in the win. But the offense was no longer what it once was, and as Manning’s time with the team came to a close, the Broncos were left searching for the following offensive identity.</p>
-<p>Since Manning’s retirement, the Broncos have gone through quarterbacks in an attempt to find a leader who could recapture the offensive spark of the past. From Trevor Siemian to Case Keenum, Joe Flacco to Drew Lock, and eventually Teddy Bridgewater and Russell Wilson, it has been a revolving door of quarterbacks, each one offering brief glimpses of hope before falling short. While a handful of other quarterbacks also played during this period, these key figures offered brief glimpses of hope before ultimately falling short in securing long-term success for the franchise.</p>
-<p>Let’s take a closer look at how Denver’s quarterbacks have fared since Manning. Below is a table of key players who have led the Broncos offense from 2012-2023. As you’ll notice, Manning’s success stands out clearly from the others. Even though quarterbacks like Russell Wilson were expected to be the solution, Denver has still struggled to find consistency and stability at the position.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="xfhbxbxzlc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xfhbxbxzlc table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#xfhbxbxzlc thead, #xfhbxbxzlc tbody, #xfhbxbxzlc tfoot, #xfhbxbxzlc tr, #xfhbxbxzlc td, #xfhbxbxzlc th {
-  border-style: none;
-}
-
-#xfhbxbxzlc p {
-  margin: 0;
-  padding: 0;
-}
-
-#xfhbxbxzlc .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: none;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#xfhbxbxzlc .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#xfhbxbxzlc .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#xfhbxbxzlc .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_bottom_border {
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_col_headings {
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#xfhbxbxzlc .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#xfhbxbxzlc .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#xfhbxbxzlc .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#xfhbxbxzlc .gt_column_spanner {
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#xfhbxbxzlc .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#xfhbxbxzlc .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#xfhbxbxzlc .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#xfhbxbxzlc .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#xfhbxbxzlc .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#xfhbxbxzlc .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: none;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#xfhbxbxzlc .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xfhbxbxzlc .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#xfhbxbxzlc .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#xfhbxbxzlc .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#xfhbxbxzlc .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xfhbxbxzlc .gt_first_summary_row {
-  border-top-style: none;
-  border-top-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#xfhbxbxzlc .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xfhbxbxzlc .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: none;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: none;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#xfhbxbxzlc .gt_table_body {
-  border-top-style: none;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xfhbxbxzlc .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#xfhbxbxzlc .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#xfhbxbxzlc .gt_left {
-  text-align: left;
-}
-
-#xfhbxbxzlc .gt_center {
-  text-align: center;
-}
-
-#xfhbxbxzlc .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#xfhbxbxzlc .gt_font_normal {
-  font-weight: normal;
-}
-
-#xfhbxbxzlc .gt_font_bold {
-  font-weight: bold;
-}
-
-#xfhbxbxzlc .gt_font_italic {
-  font-style: italic;
-}
-
-#xfhbxbxzlc .gt_super {
-  font-size: 65%;
-}
-
-#xfhbxbxzlc .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#xfhbxbxzlc .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#xfhbxbxzlc .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#xfhbxbxzlc .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#xfhbxbxzlc .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#xfhbxbxzlc .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#xfhbxbxzlc .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#xfhbxbxzlc .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#xfhbxbxzlc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="gt_heading header">
-<th colspan="4" class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #000000; font-weight: bold;">A decade of quarterback changes in Denver</th>
-</tr>
-<tr class="gt_heading even">
-<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; color: #000000;">Inconsistent quarterback play in the aftermath of Manning's retirement</th>
-</tr>
-<tr class="gt_col_headings header">
-<th id="Player" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Player</th>
-<th id="Record" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Record</th>
-<th id="Touchdowns" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Touchdowns</th>
-<th id="Interceptions" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold" scope="col">Interceptions</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_center" headers="Player" style="background-color: #ADD8E6; color: #000000">Peyton Manning</td>
-<td class="gt_row gt_right" headers="Record" style="background-color: #ADD8E6; color: #000000">50-14</td>
-<td class="gt_row gt_right" headers="Total_TD" style="background-color: #ADD8E6; color: #000000">140</td>
-<td class="gt_row gt_right" headers="Total_Int" style="background-color: #ADD8E6; color: #000000">53</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="Player">Trevor Siemian</td>
-<td class="gt_row gt_right gt_striped" headers="Record">13-11</td>
-<td class="gt_row gt_right gt_striped" headers="Total_TD">30</td>
-<td class="gt_row gt_right gt_striped" headers="Total_Int">24</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="Player">Case Keenum</td>
-<td class="gt_row gt_right" headers="Record">6-10</td>
-<td class="gt_row gt_right" headers="Total_TD">18</td>
-<td class="gt_row gt_right" headers="Total_Int">15</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="Player">Joe Flacco</td>
-<td class="gt_row gt_right gt_striped" headers="Record">2-6</td>
-<td class="gt_row gt_right gt_striped" headers="Total_TD">6</td>
-<td class="gt_row gt_right gt_striped" headers="Total_Int">5</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="Player">Drew Lock</td>
-<td class="gt_row gt_right" headers="Record">8-13</td>
-<td class="gt_row gt_right" headers="Total_TD">25</td>
-<td class="gt_row gt_right" headers="Total_Int">20</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_center gt_striped" headers="Player">Teddy Bridgewater</td>
-<td class="gt_row gt_right gt_striped" headers="Record">7-7</td>
-<td class="gt_row gt_right gt_striped" headers="Total_TD">18</td>
-<td class="gt_row gt_right gt_striped" headers="Total_Int">7</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_center" headers="Player" style="background-color: #ADD8E6; color: #000000">Russell Wilson</td>
-<td class="gt_row gt_right" headers="Record" style="background-color: #ADD8E6; color: #000000">11-19</td>
-<td class="gt_row gt_right" headers="Total_TD" style="background-color: #ADD8E6; color: #000000">42</td>
-<td class="gt_row gt_right" headers="Total_Int" style="background-color: #ADD8E6; color: #000000">19</td>
-</tr>
-</tbody><tfoot class="gt_sourcenotes">
-<tr class="odd">
-<td colspan="4" class="gt_sourcenote"><p>By: Maddie Meyerle | Source: Sports-Reference.com</p></td>
-</tr>
-</tfoot>
-
-</table>
-
-</div>
-</div>
-</div>
-<p>The team has cycled through quarterbacks, each offering glimpses of hope but needing more stability to bring the Broncos back to playoff contention. Even with a proven veteran like Russell Wilson, the offense has struggled to regain the spark it had in Manning’s prime. It’s been a tough stretch for Denver, and finding a leader at quarterback remains the key to their future success.</p>
-<p>But the future may not be as bleak as it seems. Bo Nix, a promising young quarterback, could be the answer the Broncos have been looking for. With his strong rookie performance, Nix represents the hope that Denver’s search for stability at the position might finally come to an end.</p>
-<p>While it’s too early to make any definitive conclusions, Nix’s early signs of success suggest that he might be the quarterback who can finally turn things around for the Broncos. With the right development, he could be the player who brings the team back into playoff contention and restores hope for the future.</p>
+<p>text</p>
 
 
 
